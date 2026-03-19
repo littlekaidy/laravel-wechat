@@ -8,6 +8,4 @@ namespace Overtrue\LaravelWeChat\Events\OpenPlatform;
  * @method string getInfoType()
  * @method string getAuthorizerAppid()
  */
-class Unauthorized extends OpenPlatformEvent
-{
-}
+class Unauthorized extends OpenPlatformEvent {}

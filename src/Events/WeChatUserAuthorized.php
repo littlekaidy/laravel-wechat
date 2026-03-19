@@ -22,8 +22,7 @@ class WeChatUserAuthorized
         public User $user,
         public bool $isNewSession = false,
         public string $account = ''
-    ) {
-    }
+    ) {}
 
     public function getUser(): User
     {

@@ -2,22 +2,26 @@
 
 namespace Overtrue\LaravelWeChat\Traits;
 
+use EasyWeChat\Kernel\Exceptions\BadRequestException;
+use EasyWeChat\Kernel\Exceptions\InvalidArgumentException;
+use EasyWeChat\Kernel\Exceptions\RuntimeException;
 use EasyWeChat\OpenPlatform\Application;
 use Overtrue\LaravelWeChat\Events\OpenPlatform\Authorized;
 use Overtrue\LaravelWeChat\Events\OpenPlatform\AuthorizeUpdated;
 use Overtrue\LaravelWeChat\Events\OpenPlatform\Unauthorized;
 use Overtrue\LaravelWeChat\Events\OpenPlatform\VerifyTicketRefreshed;
+use Psr\Http\Message\ResponseInterface;
 
 trait HandleOpenPlatformServerEvents
 {
     /**
-     * @throws \EasyWeChat\Kernel\Exceptions\InvalidArgumentException
-     * @throws \EasyWeChat\Kernel\Exceptions\BadRequestException
+     * @throws InvalidArgumentException
+     * @throws BadRequestException
      * @throws \Throwable
      * @throws \ReflectionException
-     * @throws \EasyWeChat\Kernel\Exceptions\RuntimeException
+     * @throws RuntimeException
      */
-    public function handleServerEvents(Application $application, ?callable $callback = null): \Psr\Http\Message\ResponseInterface
+    public function handleServerEvents(Application $application, ?callable $callback = null): ResponseInterface
     {
         $this->disableLaravelDebugbar();
 

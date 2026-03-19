@@ -8,6 +8,4 @@ namespace Overtrue\LaravelWeChat\Events\OpenPlatform;
  * @method string getInfoType()
  * @method string getComponentVerifyTicket()
  */
-class VerifyTicketRefreshed extends OpenPlatformEvent
-{
-}
+class VerifyTicketRefreshed extends OpenPlatformEvent {}

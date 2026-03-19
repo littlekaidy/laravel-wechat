@@ -37,11 +37,11 @@ return [
          * 接口请求相关配置，超时时间等，具体可用参数请参考：
          * https://github.com/symfony/symfony/blob/6.0/src/Symfony/Contracts/HttpClient/HttpClientInterface.php#L26
          */
-            //'http' => [
+            // 'http' => [
             //  'timeout' => 5.0,
             //   // 如果你在国外想要覆盖默认的 url 的时候才使用，根据不同的模块配置不同的 uri
             //  'base_uri' => 'https://api.weixin.qq.com/',
-            //],
+            // ],
         ],
     ],
 

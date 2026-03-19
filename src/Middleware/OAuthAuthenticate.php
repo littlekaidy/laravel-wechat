@@ -28,11 +28,11 @@ class OAuthAuthenticate
         Request $request,
         Closure $next,
         string $account = 'default',
-        string $scope = null,
+        ?string $scope = null,
         ?string $type = 'service'
     ): mixed {
         // 保证兼容性参数处理
-        $prefix = ('work' !== $type) ? 'official_account' : 'work';
+        $prefix = ($type !== 'work') ? 'official_account' : 'work';
 
         $sessionKey = \sprintf('easywechat.oauth_user.%s', $account);
         $name = \sprintf('easywechat.%s.%s', $prefix, $account);

@@ -2,6 +2,7 @@
 
 namespace Overtrue\LaravelWeChat;
 
+use EasyWeChat\OfficialAccount\Application;
 use Illuminate\Support\Facades\Facade;
 
 class EasyWeChat extends Facade
@@ -11,7 +12,7 @@ class EasyWeChat extends Facade
         return 'easywechat.official_account';
     }
 
-    public static function officialAccount(string $name = 'default'): \EasyWeChat\OfficialAccount\Application
+    public static function officialAccount(string $name = 'default'): Application
     {
         return app('easywechat.official_account.'.$name);
     }
